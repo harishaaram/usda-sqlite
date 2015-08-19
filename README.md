@@ -16,12 +16,12 @@ $ python example/search.py salmon
 
 ## Useful queries
 
-#### Get all nutrient data for Dairy and Egg Products
+##### Get all nutrient data for Dairy and Egg Products
 ```
 select count(*) from nutrition join food on food.id = nutrition.food_id where food.food_group_id = 100;
 ```
 
-#### Populating Database
+##### Populating Database
 
 A database is included in the repo for SR27.
 
