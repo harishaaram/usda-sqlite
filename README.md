@@ -8,11 +8,12 @@ The USDA has a database of nutritional information for many foods available at:
 
 By default it's contained in flat files. This project includes scripts to generate appropriate schema and import them into a SQLite database. I've also hand generated a subset of the nutrients that includes commonly-familiar nutrients vs. the very extensive list provided by the USDA.
 
-Some example scripts to query the databaseare in the `example` folder. Sample usage:
+Some example scripts to query the database are in the `python` and `node` folders. Sample usage:
 ```
 $ python python/nutrients.py 01001
 $ python python/common_nutrients.py 21060
 $ python python/search.py salmon
+$ node node/nutrient_csv.js > nutrient.csv
 ```
 
 ## Useful queries
