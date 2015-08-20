@@ -9,8 +9,9 @@ The USDA has a database of nutritional information for many foods available at:
 By default it's contained in flat files. This project includes scripts to generate appropriate schema and import them into a SQLite database. I've also hand generated a subset of the nutrients that includes commonly-familiar nutrients vs. the very extensive list provided by the USDA.
 
 Some example scripts to query the databaseare in the `example` folder. Sample usage:
-```sh
-$ python example/nutrition.py 01001
+```
+$ python example/nutrients.py 01001
+$ python example/common_nutrients.py 21060
 $ python example/search.py salmon
 ```
 
@@ -19,6 +20,11 @@ $ python example/search.py salmon
 ##### Get all nutrient data for Dairy and Egg Products
 ```
 select count(*) from nutrition join food on food.id = nutrition.food_id where food.food_group_id = 100;
+```
+
+##### Pick a random food
+```
+select * from food order by random() limit 1;
 ```
 
 ##### Populating Database
