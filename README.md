@@ -10,9 +10,9 @@ By default it's contained in flat files. This project includes scripts to genera
 
 Some example scripts to query the databaseare in the `example` folder. Sample usage:
 ```
-$ python example/nutrients.py 01001
-$ python example/common_nutrients.py 21060
-$ python example/search.py salmon
+$ python python/nutrients.py 01001
+$ python python/common_nutrients.py 21060
+$ python python/search.py salmon
 ```
 
 ## Useful queries
