@@ -38,10 +38,5 @@ Run create_db.sh with the name of output database:
 $ ./create_db.sh usda.sql3
 ```
 
-## SQLlite browser
-I recommend using the open source [sqlitebrowser](http://sqlitebrowser.org/) to view the database.
-![sqllitebrowser_screenshot](
-https://github.com/sqlitebrowser/sqlitebrowser/raw/master/images/sqlitebrowser.png)
-
 ## Attribution
 Adapted from <https://github.com/czarandy/usda> for scripts to run on Mac OS X with SR27 release by [Alyssa Quek](https://github.com/alyssaq).
