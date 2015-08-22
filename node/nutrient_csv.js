@@ -14,16 +14,17 @@ db.serialize(function() {
 
   db.each("select * from nutrient", function(err, row) {
     nutrientLookup[row.id] = row;
-    for (var k in foodLookup) {
-      foodLookup[k][row.name + " (" + row.units+ ")"] = null;
-    }
   });
 
   db.each("select * from nutrition", function(err, row) {
     var nutrient = nutrientLookup[row.nutrient_id];
     foodLookup[row.food_id][nutrient.name + " (" + nutrient.units+ ")"] = row.amount;
   }, function() {
-    console.log(d3.csv.format(d3.values(foodLookup)));
+    var values = d3.values(foodLookup);
+    d3.values(nutrientLookup).forEach(function(nut) {
+      values[0][nut.name + " (" + nut.units+ ")"] = values[0][nut.name + " (" + nut.units+ ")"] || null;
+    });
+    console.log(d3.csv.format(values));
   });
 });
 
