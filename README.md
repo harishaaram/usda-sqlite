@@ -30,9 +30,9 @@ select * from food order by random() limit 1;
 
 ##### Populating Database
 
-A database is included in the repo for SR27.
+A database is included in the repo for SR28.
 
-To re-populate the database from scratch, you will need to first download the files and unzip them into the `data` directory. Files for SR27 are included. 
+To re-populate the database from scratch, you will need to first download the files and unzip them into the `data` directory. Files for SR28 are included. 
 
 Run create_db.sh with the name of output database:
 ```sh
@@ -40,4 +40,4 @@ $ ./create_db.sh usda.sql3
 ```
 
 ## Attribution
-Adapted from <https://github.com/czarandy/usda> for scripts to run on Mac OS X with SR27 release by [Alyssa Quek](https://github.com/alyssaq).
+Adapted from <https://github.com/czarandy/usda> for scripts to run on Mac OS X with SR28 release by [Alyssa Quek](https://github.com/alyssaq).
